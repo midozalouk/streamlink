@@ -20,6 +20,14 @@ log = logging.getLogger(__name__)
 @pluginmatcher(re.compile(
     r'https?://(?:www\.)?ok\.ru/'
 ))
+
+@pluginmatcher(re.compile(
+    r'https?://(?:www\.)?m\.ok\.ru/'
+))
+
+@pluginmatcher(re.compile(
+    r'https?://(?:www\.)?mobile\.ok\.ru/'
+))
 class OKru(Plugin):
     QUALITY_WEIGHTS = {
         "full": 1080,
